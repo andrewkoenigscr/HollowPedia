@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/styleModal.css">
+    <link rel="stylesheet" href="assets/css/styleAnimation.css">
+
+    <!-- Estilos para o Formulário de Cadastro -->
+    <style>
+        /* Estiliza o container do formulário */
+        .form-container {
+            background-color: rgba(26, 26, 26, 0.75);
+            border: 1px solid rgba(130, 170, 255, 0.2);
+            border-radius: 10px;
+            padding: 30px 40px;
+            margin: 20px auto 0 auto;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+            width: 100%;
+            max-width: 600px; /* Limita a largura do formulário */
+        }
+
+        /* Agrupamento de campos (nome, email, etc) */
+        .form-group {
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            color: #82aaff; /* Cor azulada para labels */
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="tel"],
+        .form-group input[type="date"],
+        .form-group input[type="password"],
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            background-color: #101010;
+            border: 1px solid rgba(130, 170, 255, 0.3);
+            border-radius: 6px;
+            color: #f0f0f0;
+            font-family: 'Cinzel', serif;
+            font-size: 1em;
+            box-sizing: border-box; /* Garante que o padding não estoure a largura */
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical; /* Permite redimensionar apenas verticalmente */
+        }
+
+        /* Estiliza o Fieldset e Legend */
+        fieldset {
+            border: 1px solid rgba(130, 170, 255, 0.3);
+            border-radius: 6px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        legend {
+            font-weight: 600;
+            color: #82aaff;
+            font-size: 1.1em;
+            padding: 0 10px; /* Espaçamento para a legenda "flutuar" na borda */
+        }
+
+        /* Opções de Radio e Checkbox */
+        .radio-group, .checkbox-group {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .radio-group label, .checkbox-group label {
+            color: #f0f0f0;
+            font-weight: normal;
+            font-size: 1em;
+            margin-left: 10px;
+        }
+
+        .radio-group input[type="radio"],
+        .checkbox-group input[type="checkbox"] {
+            width: auto;
+        }
+
+        /* Botão de Envio */
+        .submit-button {
+            background-color: #4b6cb7;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 8px rgba(75,108,183,0.6);
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            color: #fff;
+            font-family: 'Cinzel', serif;
+            font-size: 1.1em;
+            font-weight: bold;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .submit-button:hover {
+            background-color: #82aaff;
+            transform: scale(1.02);
+        }
+
+    </style>
+</head>
+<body>
+    <header aria-label="Cabeçalho do site HollowPedia" id="cabecalho">
+        <h1>HollowPedia</h1>
+
+        <nav aria-label="Navegação principal">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="personagens.html">Personagens</a></li>
+                <li><a href="regioes.html">Regiões</a></li>
+                <li><a href="amuletos.html">Amuletos</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+            </ul>
+
+            <button aria-label="Ir para página de cadastro">
+                <!-- Link ativo para a própria página -->
+                <a href="cadastro.html" style="color: #82aaff; text-shadow: 0 0 8px rgba(130,170,255,0.6);">Cadastro</a>
+            </button>
+        </nav>
+    </header>
+
+    <main aria-label="Conteúdo principal">
+        <div class="falling-particles"> <!--Cada div vai ser uma particula-->
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        
+        <!-- Conteúdo principal da página "Cadastro" -->
+        <section aria-label="Formulário de Cadastro">
+            <h2>Junte-se à HollowPedia</h2>
+            <p>Torne-se um explorador de Hallownest! Crie sua conta para salvar suas builds de amuletos favoritas e registrar seu progresso.</p>
+            
+            <!-- Formulário Semântico -->
+            <form action="#" method="POST" class="form-container">
+                
+                <!-- Campo de Texto (text) -->
+                <div class="form-group">
+                    <label for="nome">Nome de Explorador:</label>
+                    <input type="text" id="nome" name="nome_explorador" required placeholder="Ex: O Cavaleiro">
+                </div>
+                
+                <!-- Campo de Email (email) -->
+                <div class="form-group">
+                    <label for="email">Seu Email:</label>
+                    <input type="email" id="email" name="email_usuario" required placeholder="email@exemplo.com">
+                </div>
+
+                <!-- Campo de Senha (password) -->
+                <div class="form-group">
+                    <label for="senha">Senha Secreta:</label>
+                    <input type="password" id="senha" name="senha" required minlength="8" placeholder="Mínimo 8 caracteres">
+                </div>
+
+                <!-- Campo de Telefone (tel) -->
+                <div class="form-group">
+                    <label for="telefone">Telefone (Opcional):</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX">
+                </div>
+
+                <!-- Campo de Data (date) -->
+                <div class="form-group">
+                    <label for="nascimento">Data de Nascimento:</label>
+                    <input type="date" id="nascimento" name="data_nascimento" required>
+                </div>
+
+                <!-- Campo de Seleção (select) -->
+                <div class="form-group">
+                    <label for="amuleto-favorito">Amuleto Favorito:</label>
+                    <select id="amuleto-favorito" name="amuleto_favorito">
+                        <option value="">Selecione um amuleto...</option>
+                        <option value="corte-rapido">Corte Rápido</option>
+                        <option value="forca-inquebravel">Força Inquebrável</option>
+                        <option value="marca-orgulho">Marca de Orgulho</option>
+                        <option value="pedra-xama">Pedra Xamã</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                </div>
+
+                <!-- Campo de Rádio (radio) com Fieldset -->
+                <fieldset>
+                    <legend>Você já zerou Hollow Knight?</legend>
+                    <div class="radio-group">
+                        <input type="radio" id="zerou-sim" name="status_jogo" value="sim" required>
+                        <label for="zerou-sim">Sim, até platinado!</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="zerou-nao" name="status_jogo" value="nao">
+                        <label for="zerou-nao">Ainda não, estou na jornada.</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="zerou-radiance" name="status_jogo" value="radiance">
+                        <label for="zerou-radiance">Estou preso na Radiância...</label>
+                    </div>
+                </fieldset>
+
+                <!-- Campo de Textarea (textarea) -->
+                <div class="form-group">
+                    <label for="mensagem">Sua citação favorita do jogo (Opcional):</label>
+                    <textarea id="mensagem" name="citacao" rows="4" placeholder="Ex: 'Sem mente para pensar. Sem vontade para quebrar...'"></textarea>
+                </div>
+
+                <!-- Campo de Checkbox (checkbox) -->
+                <div class="checkbox-group">
+                    <input type="checkbox" id="termos" name="aceite_termos" required>
+                    <label for="termos">Eu aceito os termos e juro lealdade ao Rei Pálido.</label>
+                </div>
+
+                <!-- Botão de Envio -->
+                <button type="submit" class="submit-button">Criar Conta</button>
+
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Modal (Mantido como no seu arquivo) -->
+    <button id="infoButton" aria-label="Abrir o Campo de Ajuda"><img src="assets/img/icone knight.png" alt="Icone do Cavalheiro de Hollow Knight" class="iconeCanto"></button>
+
+    <div id="infoModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitulo">
+        <div class="conteudoModal">
+            <span id="fecharModal" aria-label="Fechar Janela">&times;</span>
+            <h2>Suporte</h2>
+            <p></p> <!-- Lembre-se de preencher este parágrafo -->
+        </div>
+    </div>
+
+    <!-- Footer (Mantido como no seu arquivo, com o <article> dentro) -->
+    <footer aria-label="Rodapé com informações institucionais" id="rodape">
+        <article aria-label="Outros jogos relacionados a Hollow Knight">
+            <div id="outrosJogos">
+                <h2>Outros Jogos</h2>
+                <ul>
+                    <li><a href="#">Hollow Knight Silksong</a></li>
+                    <li><a href="https://youtu.be/ItQoBbQGMvY?si=sXtz2vTySvIUA2h1">História Completa de Hollow Knight</a></li> </ul>
+            </div>
+        </article>
+        <p>Website para Realização de Avaliação da Matéria Desenvolvimento Web Básico da Universidade Positivo</p>
+    </footer>
+
+    <script src="js/scriptModal.js"></script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap');
+
+body {
+    background-color: #0a0a0a;
+    color: #f0f0f0;
+    font-family: 'Cinzel', serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Centralizar o título */
+header h1 {
+    text-align: center;
+    margin: 10px 0;
+    color: #f5f5f5; /* branco gelo */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Organizar o nav */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    background-color: #1a1a1a;
+    padding: 10px 0;
+    border: none; /* remove bordas azuis */
+}
+
+/* Lista do menu */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Links do menu */
+nav a {
+    text-decoration: none;
+    color: #f0f0f0;
+    font-weight: bold;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+nav a:hover {
+    color: #82aaff;
+    text-shadow: 0 0 8px rgba(130,170,255,0.6);
+}
+
+/* Botão de cadastro (visível novamente) */
+nav button {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(75, 108, 183, 0.7);;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(75,108,183,0.6);
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    z-index: 10;
+}
+
+nav button:hover {
+    transform: translateY(-50%) scale(1.05);
+}
+
+nav button a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Rodapé */
+footer {
+    background-color: #111;
+    color: #ccc;
+    text-align: center;
+    padding: 15px 0;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.4);
+    
+    /* Adicione margin-top para dar espaço entre o main e o footer */
+    margin-top: 60px; 
+}
+
+/* Article (Outros Jogos) */
+footer article {
+    margin-bottom: 10px;
+}
+
+/* Caixa do article */
+#outrosJogos {
+    display: inline-block;
+    background-color: #1a1a1a;
+    padding: 10px 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(130,170,255,0.2);
+}
+
+#outrosJogos h2 {
+    color: #f5f5f5;
+    margin-bottom: 8px;
+}
+
+#outrosJogos ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#outrosJogos li {
+    margin: 5px 0;
+}
+
+#outrosJogos a {
+    color: #61dafb;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+#outrosJogos a:hover {
+    color: #82aaff;
+    text-decoration: none;
+}
+
+/* Texto do rodapé */
+footer p {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #aaa;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+    gap: 40px;
+    border: none; 
+
+    position: relative; 
+    overflow: hidden; 
+}
+
+h1{
+    font-size: 64px;
+}
+
+h2{
+    font-size: 48px;
+}

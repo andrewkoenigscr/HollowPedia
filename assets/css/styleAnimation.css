@@ -1,0 +1,111 @@
+/* Efeito de Neve/Cinzas (styleAnimation.css) */
+
+.falling-particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* 100% da altura do <main> */
+  overflow: hidden;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ANIMAÇÃO DE QUEDA CORRIGIDA */
+@keyframes fall {
+  0% {
+    top: -100px; /* Começa 100px acima do topo */
+    transform: translateX(0px);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.7;
+  }
+  100% {
+    top: 100%; /* Desce 100% da altura do container (o <main>) */
+    transform: translateX(20px);
+    opacity: 0;
+  }
+}
+
+/* REGRA BASE PARA TODAS AS PARTÍCULAS (as <div>s) */
+.falling-particles > div {
+  content: "";
+  position: absolute;
+  /* top: 0; FOI REMOVIDO DAQUI */
+  background: #e0e0e0;
+  border-radius: 50%;
+  
+  animation-name: fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* --- ESTILOS INDIVIDUAIS PARA CADA PARTÍCULAS --- */
+
+.falling-particles > div:nth-child(1) {
+  width: 10px;
+  height: 10px;
+  left: 10%; 
+  animation-duration: 12s; /* Duração um pouco maior */
+  animation-delay: -3s; 
+}
+
+.falling-particles > div:nth-child(2) {
+  width: 6px;
+  height: 6px;
+  left: 20%;
+  animation-duration: 14s; /* Duração um pouco maior */
+  animation-delay: -5s;
+  background: #aaa; 
+}
+
+.falling-particles > div:nth-child(3) {
+  width: 8px;
+  height: 8px;
+  left: 30%;
+  animation-duration: 10s; /* Duração um pouco maior */
+  animation-delay: -1s;
+}
+
+.falling-particles > div:nth-child(4) {
+  width: 12px;
+  height: 12px;
+  left: 40%;
+  animation-duration: 9s; /* Duração um pouco maior */
+  animation-delay: -7s;
+  background: #ccc;
+}
+
+.falling-particles > div:nth-child(5) {
+  width: 5px;
+  height: 5px;
+  left: 50%;
+  animation-duration: 17s; /* Duração um pouco maior */
+  animation-delay: -2s;
+}
+
+.falling-particles > div:nth-child(6) {
+  width: 8px;
+  height: 8px;
+  left: 60%;
+  animation-duration: 11s; /* Duração um pouco maior */
+  animation-delay: -4s;
+}
+
+.falling-particles > div:nth-child(7) {
+  width: 4px;
+  height: 4px;
+  left: 70%;
+  animation-duration: 15s; /* Duração um pouco maior */
+  animation-delay: -8s;
+  background: #bbb;
+}
+
+.falling-particles > div:nth-child(8) {
+  width: 10px;
+  height: 10px;
+  left: 80%;
+  animation-duration: 9s; /* Duração um pouco maior */
+  animation-delay: -1.5s;
+}

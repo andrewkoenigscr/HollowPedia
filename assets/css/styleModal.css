@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&display=swap');
+
+/* ===== CONFIGURAÇÃO GERAL ===== */
+body {
+  font-family: 'Cinzel', serif;
+}
+
+/* ===== BOTÃO DO MODAL ===== */
+#infoButton {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 2000; /* acima do rodapé */
+  transition: transform 0.3s ease;
+}
+
+#infoButton:hover {
+  transform: scale(1.1);
+}
+
+.iconeCanto {
+  width: 70px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: none; /* Alterado */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.iconeCanto:hover {
+  transform: scale(1.1);
+  box-shadow: none; /* Alterado */
+}
+
+/* ===== MODAL ===== */
+.modal {
+  display: none; /* começa escondido */
+  position: fixed;
+  z-index: 3000; /* acima de tudo */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(4px);
+}
+
+/* ===== CONTEÚDO DO MODAL ===== */
+.conteudoModal {
+  background-color: #1a1a1a;
+  color: #f0f0f0;
+  margin: 10% auto;
+  padding: 30px;
+  border-radius: 15px;
+  width: 60%;
+  max-width: 600px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 0 20px rgba(130, 170, 255, 0.4);
+  border: 2px solid rgba(130, 170, 255, 0.2);
+}
+
+.conteudoModal h2 {
+  color: #f0f0f0;
+  margin-bottom: 10px;
+}
+
+.conteudoModal p {
+  color: #ccc;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* ===== BOTÃO DE FECHAR ===== */
+#fecharModal {
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  font-size: 28px;
+  color: #82aaff;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+#fecharModal:hover {
+  transform: scale(1.2);
+  color: #a8c4ff;
+}
+
+/* ===== ESTILO DE <dialog> (caso seja usado no futuro) ===== */
+dialog {
+  background-color: #1b1b1e;
+  border: 2px solid rgba(130, 170, 255, 0.3);
+  border-radius: 12px;
+  padding: 25px;
+  color: #f0f0f0;
+  font-family: 'Cinzel', serif;
+  width: 350px;
+  box-shadow: 0 0 25px rgba(130, 170, 255, 0.4);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4000;
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+/* ===== BOTÕES INTERNOS DO DIALOG ===== */
+dialog button {
+  background-color: #4b6cb7;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background-color 0.3s, transform 0.2s;
+  font-family: 'Cinzel', serif;
+}
+
+dialog button:hover {
+  background-color: #82aaff;
+  transform: scale(1.05);
+}

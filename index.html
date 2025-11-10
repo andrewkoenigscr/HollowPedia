@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Início</title>
+    <link rel="icon" href="assets/img/icone hollow.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/styleModal.css">
+    <link rel="stylesheet" href="assets/css/styleAnimation.css">
+</head>
+<body>
+    <header aria-label="Cabeçalho do site HollowPedia" id="cabecalho">
+        <h1>HollowPedia</h1>
+
+        <nav aria-label="Navegação principal">
+            <ul>
+                <li><a href="index.html" style="color: #82aaff;">Início</a></li>
+                <li><a href="personagens.html">Personagens</a></li>
+                <li><a href="regioes.html">Regiões</a></li>
+                <li><a href="amuletos.html">Amuletos</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+            </ul>
+
+            <button aria-label="Ir para página de cadastro">
+                <a href="cadastro.html">Cadastro</a>
+            </button>
+        </nav>
+    </header>
+
+    <main aria-label="Conteúdo principal">
+        <div class="falling-particles"> <!--Cada div vai ser uma particula-->
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <section aria-label="Informações sobre o Reino de Hallownest">
+            <h2>Reino de Hallownest</h2>
+            <p>O que um dia foi um reino eterno, erguido pela luz e vontade do Rei Pálido, agora são apenas ruínas assombradas. Este ser, um Wyrm antigo que assumiu a forma de um inseto, chegou a estas terras e concedeu senciência aos seus habitantes. Em troca, eles abandonaram sua antiga deusa, a Radiância. Foi esse ato de esquecimento que plantou a semente da ruína, pois uma divindade esquecida não descansa, e sua ira sonolenta eventualmente envenenou o reino com a Infecção.</p>
+        </section>
+
+        <aside aria-label="História do jogo Hollow Knight">
+            <h2>História</h2>
+            <p>A tragédia de Hallownest está selada em escuridão e sacrifício. Para combater a Infecção que brotava da Radiância, o Rei Pálido buscou uma solução no Abismo. Lá, ele usou o Vazio para criar incontáveis receptáculos, seres sem mente, vontade ou voz, destinados a conter a praga. Um deles, o Cavaleiro Vazio, foi escolhido e selado dentro do Templo do Ovo Negro. No entanto, uma falha em sua pureza — um laço com seu criador — permitiu que a Infecção vazasse lentamente, condenando o reino e perpetuando o ciclo que agora você testemunha.</p>
+        </aside>
+
+        <aside aria-label="Informações sobre o Mundo dos Sonhos">
+            <h2>Mundo dos Sonhos</h2>
+            <p>Além do mundo físico, existe o Reino dos Sonhos, uma dimensão etérea composta de memórias, essência e espíritos. Entregue pela Vidente, a última da tribo das mariposas, o Ferrão dos Sonhos é a chave para este lugar. Com ele, o Cavaleiro pode colher Essência de guerreiros caídos e chefes em suas formas oníricas, desvendando segredos do passado e fortalecendo sua conexão com o mundo espiritual. É também neste plano que os três Sonhadores dormem, mantendo o selo do Templo, e onde a própria Radiância permanece aprisionada.</p>
+        </aside>
+
+        <aside aria-label="Informações sobre os Panteões">
+            <h2>Panteões</h2>
+            <p>Nas profundezas da Hidrovia Real, na Cova de Lixo, a Buscadora de Deuses sintoniza todos os deuses e guerreiros de Hallownest. Ao usar o Ferrão dos Sonhos nela, o Cavaleiro é transportado para o Lar dos Deuses (Godhome). Lá, ele enfrenta os Panteões: desafios sequenciais contra os chefes do reino, em sua forma mais pura e divina. Este é o desafio final, uma escalada de poder que testa a habilidade e a vontade do jogador, culminando no confronto supremo contra a Radiância Absoluta, a verdadeira fonte da Infecção.</p>
+        </aside>
+    </main>
+
+    <button id="infoButton" aria-label="Abrir o Campo de Ajuda"><img src="assets/img/icone knight.png" alt="Icone do Cavalheiro de Hollow Knight" class="iconeCanto"></button>
+
+    <div id="infoModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitulo">
+        <div class="conteudoModal">
+            <span id="fecharModal" aria-label="Fechar Janela">&times;</span>
+            <h2>Suporte</h2>
+            <p style="font-size: 16px;">Este site é um projeto acadêmico para a Universidade Positivo.<br>
+Encontrou algum bug, erro de layout ou tem alguma sugestão?<br>
+Sua opinião é muito bem-vinda!
+<br><br>
+<strong>Desenvolvedor:</strong> Andrew Koenig Camargo<br>
+<strong>Email para Contato:</strong> andrewkoenig04@gmail.com<br>
+<strong>GitHub do Projeto:</strong> <a href="[link-para-seu-github]" target="_blank" style="color: #61dafb; text-decoration: none;">Ver Código</a></p>
+        </div>
+    </div>
+
+    <footer aria-label="Rodapé com informações institucionais" id="rodape">
+        <article aria-label="Outros jogos relacionados a Hollow Knight">
+            <div id="outrosJogos">
+                <h2>Outros Jogos</h2>
+                <ul>
+                    <li><a href="#">Hollow Knight Silksong</a></li>
+                    <li><a href="https://youtu.be/ItQoBbQGMvY?si=sXtz2vTySvIUA2h1">História Completa de Hollow Knight</a></li> <!--Site externo-->
+                </ul>
+            </div>
+        </article>
+        <p>Website para Realização de Avaliação da Matéria Desenvolvimento Web Básico da Universidade Positivo</p>
+    </footer>
+
+    <script src="js/scriptModal.js"></script>
+</body>
+</html>

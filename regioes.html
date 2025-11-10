@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regiões</title>
+    <link rel="icon" href="assets/img/icone mapa.png">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/styleModal.css">
+    <link rel="stylesheet" href="assets/css/styleAnimation.css">
+
+    <!-- Estilos atualizados para as caixas de região -->
+    <style>
+        main section aside {
+            background-color: rgba(26, 26, 26, 0.75);
+            border: 1px solid rgba(130, 170, 255, 0.2);
+            border-radius: 10px;
+            padding: 20px 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            /* display: flex, align-items, e gap removidos */
+        }
+
+        main section aside:hover {
+            transform: translateY(-3px); 
+            box-shadow: 0 6px 16px rgba(130, 170, 255, 0.2); 
+        }
+
+        /* Classe .region-img removida */
+
+        /* Classe .region-text removida */
+
+        /* Estilos de h3 e p ajustados para ficarem diretos no aside */
+        main section aside h3 {
+            color: #82aaff;
+            margin-top: 0;
+            margin-bottom: 8px;
+            text-shadow: 0 0 5px rgba(130, 170, 255, 0.5);
+        }
+
+        main section aside p {
+            margin-bottom: 0;
+        }
+
+        /* Novo: Estilo para a imagem do mapa completo */
+        .map-img {
+            display: block;
+            margin: 25px auto; /* Centraliza e dá espaço */
+            max-width: 100%;
+            height: auto; /* Mantém proporção */
+            border-radius: 8px;
+            border: 2px solid #82aaff;
+            background-color: #1a1a1a;
+        }
+
+        /* Novo: Espaçamento para o H2 "Detalhado" */
+        .map-img + h2 {
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header aria-label="Cabeçalho do site HollowPedia" id="cabecalho">
+        <h1>HollowPedia</h1>
+
+        <nav aria-label="Navegação principal">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="personagens.html">Personagens</a></li>
+                <li><a href="regioes.html" style="color: #82aaff;">Regiões</a></li>
+                <li><a href="amuletos.html">Amuletos</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+            </ul>
+
+            <button aria-label="Ir para página de cadastro">
+                <a href="cadastro.html">Cadastro</a>
+            </button>
+        </nav>
+    </header>
+
+    <main aria-label="Conteúdo principal">
+        <div class="falling-particles"> <!--Cada div vai ser uma particula-->
+            <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        </div>
+        
+        <section aria-label="Regiões de Hollow Knight">
+            <h2>Regiões</h2>
+            <p>Hallownest é um reino vasto e interconectado. Cada região possui uma atmosfera, inimigos e segredos únicos, contando uma parte da história do reino.</p>
+            
+            <!-- Imagem do Mapa Adicionada -->
+            <img src="assets/img/mapa completo.jpg" 
+                alt="Mapa Completo de Hallownest" 
+                class="map-img" 
+                onerror="this.src='https://placehold.co/600x400/2a2a2a/e0e0e0?text=Img'; this.onerror=null;">
+
+            <!-- H2 Detalhado Adicionado -->
+            <h2>Detalhado</h2>
+
+            <aside aria-label="Dirtmouth (Boca-suja)">
+                <!-- Imagem individual removida -->
+                <h3>Dirtmouth (Boca-suja)</h3>
+                <p>A melancólica cidade na superfície, o último ponto de refúgio antes de descer para o reino em ruínas. É o lar do Ancião, Cornifer, Iselda e outros.</p>
+            </aside>
+
+            <aside aria-label="Forgotten Crossroads (Encruzilhada Esquecida)">
+                <h3>Encruzilhada Esquecida</h3>
+                <p>O antigo nexo central de Hallownest, agora infestado por insetos fracos e zumbis. Mais tarde, é consumida pela Infecção, tornando-se a Encruzilhada Infectada.</p>
+            </aside>
+
+            <aside aria-label="Greenpath (Caminho Verde)">
+                <h3>Caminho Verde</h3>
+                <p>Uma região exuberante e coberta de vegetação, protegida por Unn. É onde o Cavaleiro encontra Hornet pela primeira vez.</p>
+            </aside>
+
+            <aside aria-label="Fungal Wastes (Ermos Fúngicos)">
+                <h3>Ermos Fúngicos</h3>
+                <p>Uma caverna úmida coberta de cogumelos, lar da orgulhosa Tribo Louva-a-Deus e de criaturas fúngicas que explodem.</p>
+            </aside>
+
+            <aside aria-label="City of Tears (Cidade das Lágrimas)">
+                <h3>Cidade das Lágrimas</h3>
+                <p>A capital de Hallownest, sob uma chuva perpétua do Lago Azul acima. Abriga os ricos e cultos do reino, agora transformados em cascas vazias.</p>
+            </aside>
+
+            <aside aria-label="Crystal Peak (Pico de Cristal)">
+                <h3>Pico de Cristal</h3>
+                <p>Uma mina de cristal brilhante no topo do reino, assombrada pelos fantasmas dos mineiros e perigosas máquinas de mineração.</p>
+            </aside>
+
+            <aside aria-label="Resting Grounds (Terra do Repouso)">
+                <h3>Terra do Repouso</h3>
+                <p>O cemitério sagrado de Hallownest e lar da Vidente. É um local de paz, guardado por espíritos e memórias.</p>
+            </aside>
+
+            <aside aria-label="Deepnest (Ninho Profundo)">
+                <h3>Ninho Profundo</h3>
+                <p>O covil escuro e labiríntico das aranhas e criaturas rastejantes, lar da Sonhadora Herrah, a Fera.</p>
+            </aside>
+
+            <aside aria-label="Ancient Basin (Bacia Antiga)">
+                <h3>Bacia Antiga</h3>
+                <p>Uma área desolada e estéril nas profundezas do reino, onde o Palácio Branco ficava. É o local de nascimento dos Receptáculos e a entrada para o Abismo.</p>
+            </aside>
+
+            <aside aria-label="Kingdom's Edge (Beira do Reino)">
+                <h3>Beira do Reino</h3>
+                <p>Uma região varrida por ventos e cinzas, onde a carcaça de um Wyrm antigo caiu. É onde o Cavaleiro tem sua segunda batalha com Hornet.</p>
+            </aside>
+
+            <aside aria-label="Queen's Gardens (Jardins da Rainha)">
+                <h3>Jardins da Rainha</h3>
+                <p>Os jardins pessoais da Dama Branca, agora selvagens e repletos de Louva-a-Deuses traidores e espinhos perigosos.</p>
+            </aside>
+
+            <aside aria-label="The Abyss (O Abismo)">
+                <h3>O Abismo</h3>
+                <p>A escuridão primordial no fundo do mundo, abaixo da Bacia Antiga. É a fonte do Vazio e o local de nascimento de todos os Receptáculos.</p>
+            </aside>
+
+        </section>
+
+    </main>
+
+    <!-- Seu modal hardcoded -->
+    <button id="infoButton" aria-label="Abrir o Campo de Ajuda"><img src="assets/img/icone knight.png" alt="Icone do Cavalheiro de Hollow Knight" class="iconeCanto"></button>
+
+    <div id="infoModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitulo">
+        <div class="conteudoModal">
+            <span id="fecharModal" aria-label="Fechar Janela">&times;</span>
+            <h2>Suporte</h2>
+            <p style="font-size: 16px;">Este site é um projeto acadêmico para a Universidade Positivo.<br>
+Encontrou algum bug, erro de layout ou tem alguma sugestão?<br>
+Sua opinião é muito bem-vinda!
+<br><br>
+<strong>Desenvolvedor:</strong> Andrew Koenig Camargo<br>
+<strong>Email para Contato:</strong> andrewkoenig04@gmail.com<br>
+<strong>GitHub do Projeto:</strong> <a href="[link-para-seu-github]" target="_blank" style="color: #61dafb; text-decoration: none;">Ver Código</a></p>
+        </div>
+    </div>
+
+    <!-- Seu footer hardcoded -->
+    <footer aria-label="Rodapé com informações institucionais" id="rodape">
+        <article aria-label="Outros jogos relacionados a Hollow Knight">
+            <div id="outrosJogos">
+                <h2>Outros Jogos</h2>
+                <ul>
+                    <li><a href="#">Hollow Knight Silksong</a></li>
+                    <li><a href="https://youtu.be/ItQoBbQGMvY?si=sXtz2vTySvIUA2h1">História Completa de Hollow Knight</a></li> </ul>
+            </div>
+        </article>
+        <p>Website para Realização de Avaliação da Matéria Desenvolvimento Web Básico da Universidade Positivo</p>
+    </footer>
+
+    <script src="js/scriptModal.js"></script>
+</body>
+</html>
