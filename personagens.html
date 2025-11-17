@@ -2,14 +2,15 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale:1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personagens</title>
+    <link rel="icon" href="assets/img/icone hollow.png">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/styleModal.css">
     <link rel="stylesheet" href="assets/css/styleAnimation.css">
 
     <style>
-        /* A regra do FLEXBOX que você perguntou está aqui */
+        /* CSS Interno mantido conforme requisito */
         main section aside {
             background-color: rgba(26, 26, 26, 0.75);
             border: 1px solid rgba(130, 170, 255, 0.2);
@@ -20,8 +21,6 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             
             display: flex;
-            /* MUDANÇA DO FLEX AQUI: De 'center' para 'flex-start' */
-            /* Isso alinha o texto e a imagem no topo da caixa. */
             align-items: flex-start; 
             gap: 25px;
         }
@@ -31,11 +30,10 @@
             box-shadow: 0 6px 16px rgba(130, 170, 255, 0.2); 
         }
 
-        /* MUDANÇA NA IMAGEM AQUI */
         .char-img {
-            width: 100px;  /* Tamanho quadrado */
-            height: 100px; /* Tamanho quadrado */
-            border-radius: 15px; /* Bordas arredondadas */  
+            width: 100px;
+            height: 100px;
+            border-radius: 15px;
             object-fit: cover; 
             flex-shrink: 0;
         }
@@ -54,7 +52,6 @@
         .char-text p {
             margin-bottom: 0;
         }
-
     </style>
 </head>
 <body>
@@ -77,7 +74,8 @@
     </header>
 
     <main aria-label="Conteúdo principal">
-        <div class="falling-particles"> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+        <div class="falling-particles" aria-hidden="true"> 
+            <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
         </div>
         
         <section aria-label="NPCs (Personagens não jogáveis)">
@@ -116,6 +114,14 @@
                 </div>
             </aside>
 
+            <aside aria-label="Hornet">
+                <img src="assets/img/hornet.webp" alt="Hornet" class="char-img" onerror="this.src='https://placehold.co/80x80/2a2a2a/e0e0e0?text=Img'; this.onerror=null;">
+                <div class="char-text">
+                    <h3>Hornet</h3>
+                    <p>A Sentinela do Reino, encontrada vigiando as antigas trilhas de Hallownest. Após medir a força do Cavaleiro em combate, ela deixa de ser um obstáculo para se tornar uma guia, confiando a ele o destino de selar ou destruir a Praga.</p>
+                </div>
+            </aside>
+
             <aside aria-label="Vidente (Seer)">
                 <img src="assets/img/Seer.png" alt="Vidente" class="char-img" onerror="this.src='https://placehold.co/80x80/2a2a2a/e0e0e0?text=Img'; this.onerror=null;">
                 <div class="char-text">
@@ -125,7 +131,7 @@
             </aside>
 
             <aside aria-label="O Último Besouro (The Last Stag)">
-                <img src="https://placehold.co/80x80/2a2a2a/e0e0e0?text=Stag" alt="O Último Besouro" class="char-img" onerror="this.src='https://placehold.co/80x80/2a2a2a/e0e0e0?text=Img'; this.onerror=null;">
+                <img src="assets/img/stag.webp" alt="O Último Besouro" class="char-img" onerror="this.src='https://placehold.co/80x80/2a2a2a/e0e0e0?text=Img'; this.onerror=null;">
                 <div class="char-text">
                     <h3>O Último Besouro (The Last Stag)</h3>
                     <p>O único sobrevivente das Estações de Besouros. Ele serve como o principal meio de transporte rápido por Hallownest, carregando o Cavaleiro entre as estações que são reabertas.</p>
@@ -133,7 +139,7 @@
             </aside>
 
             <aside aria-label="Salubra">
-                <img src="https://placehold.co/80x80/2a2a2a/e0e0e0?text=Salubra" alt="Salubra" class="char-img" onerror="this.src='https://placehold.co/80x80/2a2a2a/e0e0e0?text=Img'; this.onerror=null;">
+                <img src="assets/img/Salubra.webp" alt="Salubra" class="char-img" onerror="this.src='https://placehold.co/80x80/2a2a2a/e0e0e0?text=Img'; this.onerror=null;">
                 <div class="char-text">
                     <h3>Salubra</h3>
                     <p>Uma comerciante encontrada na Encruzilhada Esquecida que vende amuletos e entalhes de amuleto. Ela só vende seus produtos para aqueles com um espírito "alegre" (e amuletos suficientes).</p>
@@ -141,7 +147,7 @@
             </aside>
 
             <aside aria-label="Zote, o Poderoso (Zote the Mighty)">
-                <img src="https://placehold.co/80x80/2a2a2a/e0e0e0?text=Zote" alt="Zote, o Poderoso" class="char-img" onerror="this.src='https://placehold.co/80x80/2a2a2a/e0e0e0?text=Img'; this.onerror=null;">
+                <img src="assets/img/zote.webp" alt="Zote, o Poderoso" class="char-img" onerror="this.src='https://placehold.co/80x80/2a2a2a/e0e0e0?text=Img'; this.onerror=null;">
                 <div class="char-text">
                     <h3>Zote, o Poderoso (Zote the Mighty)</h3>
                     <p>Um viajante pomposo e delirante que se autoproclama um grande guerreiro, embora seja completamente inepto. O jogador pode salvá-lo (ou ignorá-lo) em várias situações perigosas.</p>
@@ -149,7 +155,7 @@
             </aside>
 
             <aside aria-label="Cloth">
-                <img src="https://placehold.co/80x80/2a2a2a/e0e0e0?text=Cloth" alt="Cloth" class="char-img" onerror="this.src='https://placehold.co/80x80/2a2a2a/e0e0e0?text=Img'; this.onerror=null;">
+                <img src="assets/img/cloth.png" alt="Cloth" class="char-img" onerror="this.src='https://placehold.co/80x80/2a2a2a/e0e0e0?text=Img'; this.onerror=null;">
                 <div class="char-text">
                     <h3>Cloth</h3>
                     <p>Uma cigarra guerreira corajosa, mas um tanto medrosa, que viaja para Hallownest em busca de provar seu valor em batalha. Ela pode ser encontrada em vários locais, incluindo Ninho Profundo e Jardins da Rainha.</p>
@@ -157,7 +163,7 @@
             </aside>
 
             <aside aria-label="Myla">
-                <img src="https://placehold.co/80x80/2a2a2a/e0e0e0?text=Myla" alt="Myla" class="char-img" onerror="this.src='https://placehold.co/80x80/2a2a2a/e0e0e0?text=Img'; this.onerror=null;">
+                <img src="assets/img/myla.webp" alt="Myla" class="char-img" onerror="this.src='https://placehold.co/80x80/2a2a2a/e0e0e0?text=Img'; this.onerror=null;">
                 <div class="char-text">
                     <h3>Myla</h3>
                     <p>Uma alegre mineradora encontrada na Entrada do Pico de Cristal. Ela canta uma canção sobre escavar, mas conforme a Infecção progride, sua canção e sua mente se deterioram tragicamente.</p>
@@ -165,7 +171,7 @@
             </aside>
 
             <aside aria-label="Mestres do Ferrão (Nailmasters)">
-                <img src="https://placehold.co/80x80/2a2a2a/e0e0e0?text=Mestres" alt="Mestres do Ferrão" class="char-img" onerror="this.src='https://placehold.co/80x80/2a2a2a/e0e0e0?text=Img'; this.onerror=null;">
+                <img src="assets/img/nailmasters.png" alt="Mestres do Ferrão" class="char-img" onerror="this.src='https://placehold.co/80x80/2a2a2a/e0e0e0?text=Img'; this.onerror=null;">
                 <div class="char-text">
                     <h3>Mestres do Ferrão (Oro, Mato e Sheo)</h3>
                     <p>Três irmãos que se isolaram para aperfeiçoar suas artes do ferrão. Cada um ensina ao Cavaleiro uma poderosa Arte do Ferrão (Golpe Ciclone, Corte Rápido e Grande Corte) em troca de Geo.</p>
@@ -173,7 +179,7 @@
             </aside>
 
             <aside aria-label="Dama Branca (White Lady)">
-                <img src="https://placehold.co/80x80/2a2a2a/e0e0e0?text=Dama+Branca" alt="Dama Branca" class="char-img" onerror="this.src='https://placehold.co/80x80/2a2a2a/e0e0e0?text=Img'; this.onerror=null;">
+                <img src="assets/img/dama branca.webp" alt="Dama Branca" class="char-img" onerror="this.src='https://placehold.co/80x80/2a2a2a/e0e0e0?text=Img'; this.onerror=null;">
                 <div class="char-text">
                     <h3>Dama Branca (White Lady)</h3>
                     <p>Uma figura divina, a "Rainha" de Hallownest e parceira do Rei Pálido. Ela se selou nos Jardins da Rainha para impedir a Infecção e oferece ao Cavaleiro uma parte do Amuleto Real (Kingsoul).</p>
@@ -181,7 +187,7 @@
             </aside>
 
             <aside aria-label="Confessora Jiji / Alma de Aço Jinn">
-                <img src="https://placehold.co/80x80/2a2a2a/e0e0e0?text=Jiji" alt="Confessora Jiji" class="char-img" onerror="this.src='https://placehold.co/80x80/2a2a2a/e0e0e0?text=Img'; this.onerror=null;">
+                <img src="assets/img/jiji.webp" alt="Confessora Jiji" class="char-img" onerror="this.src='https://placehold.co/80x80/2a2a2a/e0e0e0?text=Img'; this.onerror=null;">
                 <div class="char-text">
                     <h3>Confessora Jiji / Alma de Aço Jinn</h3>
                     <p>Duas NPCs em Dirtmouth. Jiji (no modo normal) pode invocar a Sombra do Cavaleiro de volta por um Ovo Rançoso. Jinn (no modo Alma de Aço) troca Ovos Rançosos por Geo.</p>
@@ -193,9 +199,8 @@
         <section aria-label="Bosses (Chefes)">
             <h2>Bosses</h2>
             <p>Os poderosos guardiões, guerreiros e horrores infectados que se colocam no caminho do Cavaleiro. Derrotá-los é essencial para desvendar os segredos do reino e cumprir seu destino.</p>
-        
+
             <aside aria-label="Falso Cavaleiro (False Knight)">
-                <img src="https://placehold.co/80x80/2a2a2a/e0e0e0?text=Falso+Cavaleiro" alt="Falso Cavaleiro" class="char-img" onerror="this.src='https://placehold.co/80x80/2a2a2a/e0e0e0?text=Img'; this.onerror=null;">
                 <div class="char-text">
                     <h3>Falso Cavaleiro (False Knight)</h3>
                     <p>Um simples "Magliano" que roubou a armadura de um dos Grandes Cavaleiros de Hallownest. Em sua loucura, ele acredita ser um protetor e ataca ferozmente qualquer um que se aproxime.</p>
@@ -203,7 +208,6 @@
             </aside>
 
             <aside aria-label="Mãe Gruz (Gruz Mother)">
-                <img src="https://placehold.co/80x80/2a2a2a/e0e0e0?text=Mae+Gruz" alt="Mãe Gruz" class="char-img" onerror="this.src='https://placehold.co/80x80/2a2a2a/e0e0e0?text=Img'; this.onerror=null;">
                 <div class="char-text">
                     <h3>Mãe Gruz (Gruz Mother)</h3>
                     <p>Uma mosca obesa e infectada encontrada na Encruzilhada Esquecida. Ela gera "Gruzzers" de seu corpo inchado durante a batalha.</p>
@@ -211,7 +215,6 @@
             </aside>
 
             <aside aria-label="Hornet (Protetora)">
-                <img src="https://placehold.co/80x80/2a2a2a/e0e0e0?text=Hornet" alt="Hornet" class="char-img" onerror="this.src='https://placehold.co/80x80/2a2a2a/e0e0e0?text=Img'; this.onerror=null;">
                 <div class="char-text">
                     <h3>Hornet (Protetora)</h3>
                     <p>A primeira batalha contra Hornet, ocorrida no Caminho Verde. É um teste de agilidade e habilidade, onde ela mede o valor do Cavaleiro.</p>
@@ -219,7 +222,6 @@
             </aside>
 
             <aside aria-label="Lordes Louva-a-Deus (Mantis Lords)">
-                <img src="https://placehold.co/80x80/2a2a2a/e0e0e0?text=Lordes" alt="Lordes Louva-a-Deus" class="char-img" onerror="this.src='https://placehold.co/80x80/2a2a2a/e0e0e0?text=Img'; this.onerror=null;">
                 <div class="char-text">
                     <h3>Lordes Louva-a-Deus (Mantis Lords)</h3>
                     <p>As líderes da Tribo Louva-a-Deus. Elas oferecem uma batalha de honra; ao derrotá-las, o Cavaleiro ganha o respeito de toda a tribo, que passará a se curvar perante ele.</p>
@@ -227,7 +229,6 @@
             </aside>
 
             <aside aria-label="Mestre das Almas (Soul Master)">
-                <img src="https://placehold.co/80x80/2a2a2a/e0e0e0?text=Mestre+Almas" alt="Mestre das Almas" class="char-img" onerror="this.src='https://placehold.co/80x80/2a2a2a/e0e0e0?text=Img'; this.onerror=null;">
                 <div class="char-text">
                     <h3>Mestre das Almas (Soul Master)</h3>
                     <p>O líder do Santuário das Almas, que enlouqueceu em sua busca pela imortalidade através da Alma. Uma batalha rápida que recompensa o jogador com a magia Mergulho Desolador.</p>
@@ -235,7 +236,6 @@
             </aside>
 
             <aside aria-label="Defensor do Esterco (Dung Defender)">
-                <img src="https://placehold.co/80x80/2a2a2a/e0e0e0?text=Defensor" alt="Defensor do Esterco" class="char-img" onerror="this.src='https://placehold.co/80x80/2a2a2a/e0e0e0?text=Img'; this.onerror=null;">
                 <div class="char-text">
                     <h3>Defensor do Esterco (Dung Defender)</h3>
                     <p>Um dos Cinco Grandes Cavaleiros de Hallownest, Ogrim. Apesar da queda do reino, ele permanece alegre e leal, guardando os canais da Hidrovia Real. Uma batalha caótica e divertida.</p>
@@ -243,7 +243,6 @@
             </aside>
 
             <aside aria-label="Receptáculo Quebrado (Broken Vessel)">
-                <img src="https://placehold.co/80x80/2a2a2a/e0e0e0?text=Receptaculo" alt="Receptáculo Quebrado" class="char-img" onerror="this.src='https://placehold.co/80x80/2a2a2a/e0e0e0?text=Img'; this.onerror=null;">
                 <div class="char-text">
                     <h3>Receptáculo Quebrado (Broken Vessel)</h3>
                     <p>Um receptáculo falho, similar ao Cavaleiro, que sucumbiu à Infecção na Bacia Antiga. A luz da Infecção anima seu corpo e o força a atacar.</p>
@@ -251,7 +250,6 @@
             </aside>
 
             <aside aria-label="Cavaleiros Vigias (Watcher Knights)">
-                <img src="https://placehold.co/80x80/2a2a2a/e0e0e0?text=Vigias" alt="Cavaleiros Vigias" class="char-img" onerror="this.src='https://placehold.co/80x80/2a2a2a/e0e0e0?text=Img'; this.onerror=null;">
                 <div class="char-text">
                     <h3>Cavaleiros Vigias (Watcher Knights)</h3>
                     <p>Seis guardiões blindados que protegem Lurien, o Observador. O Cavaleiro deve lutar contra eles (em fases) para quebrar o selo do Sonhador.</p>
@@ -259,7 +257,6 @@
             </aside>
 
             <aside aria-label="Uumuu">
-                <img src="https://placehold.co/80x80/2a2a2a/e0e0e0?text=Uumuu" alt="Uumuu" class="char-img" onerror="this.src='https://placehold.co/80x80/2a2a2a/e0e0e0?text=Img'; this.onerror=null;">
                 <div class="char-text">
                     <h3>Uumuu</h3>
                     <p>Uma criatura massiva, parecida com uma água-viva, que guarda Monomon, a Professora, nos Arquivos da Professora. Só pode ser ferida com a ajuda de Quirrel.</p>
@@ -267,7 +264,6 @@
             </aside>
 
             <aside aria-label="Hornet (Sentinela)">
-                <img src="https://placehold.co/80x80/2a2a2a/e0e0e0?text=Hornet" alt="Hornet (Sentinela)" class="char-img" onerror="this.src='https://placehold.co/80x80/2a2a2a/e0e0e0?text=Img'; this.onerror=null;">
                 <div class="char-text">
                     <h3>Hornet (Sentinela)</h3>
                     <p>A segunda batalha contra Hornet, na Beira do Reino. Muito mais rápida e difícil, esta luta serve como o teste final para provar que o Cavaleiro está pronto para enfrentar seu destino.</p>
@@ -275,7 +271,6 @@
             </aside>
 
             <aside aria-label="O Colecionador (The Collector)">
-                <img src="https://placehold.co/80x80/2a2a2a/e0e0e0?text=Colecionador" alt="O Colecionador" class="char-img" onerror="this.src='https://placehold.co/80x80/2a2a2a/e0e0e0?text=Img'; this.onerror=null;">
                 <div class="char-text">
                     <h3>O Colecionador (The Collector)</h3>
                     <p>Uma criatura sombria e sinistra que reside na Torre do Amor. Ele captura e "preserva" insetos em jarros. A batalha envolve lutar contra os inimigos que ele solta de sua coleção.</p>
@@ -283,7 +278,6 @@
             </aside>
 
             <aside aria-label="Guerreiros dos Sonhos (Warrior Dreams)">
-                <img src="https://placehold.co/80x80/2a2a2a/e0e0e0?text=Guerreiros" alt="Guerreiros dos Sonhos" class="char-img" onerror="this.src='https://placehold.co/80x80/2a2a2a/e0e0e0?text=Img'; this.onerror=null;">
                 <div class="char-text">
                     <h3>Guerreiros dos Sonhos</h3>
                     <p>Sete espíritos de guerreiros caídos que podem ser desafiados com o Ferrão dos Sonhos: Xero, Gorb, Elder Hu, Marmu, No Eyes, Galien e Markoth. Derrotá-los concede grandes quantidades de Essência.</p>
@@ -291,7 +285,6 @@
             </aside>
 
             <aside aria-label="Chefes dos Sonhos (Dream Bosses)">
-                <img src="https://placehold.co/80x80/2a2a2a/e0e0e0?text=Chefes+Sonhos" alt="Chefes dos Sonhos" class="char-img" onerror="this.src='https://placehold.co/80x80/2a2a2a/e0e0e0?text=Img'; this.onerror=null;">
                 <div class="char-text">
                     <h3>Chefes dos Sonhos</h3>
                     <p>Versões mais poderosas de chefes já derrotados, acessadas com o Ferrão dos Sonhos: Campeão Fracassado (False Knight), Tirano das Almas (Soul Master) e Parente Perdido (Broken Vessel).</p>
@@ -299,7 +292,6 @@
             </aside>
 
             <aside aria-label="Trupe Grimm (Grimm Troupe)">
-                <img src="https://placehold.co/80x80/2a2a2a/e0e0e0?text=Grimm" alt="Trupe Grimm" class="char-img" onerror="this.src='https://placehold.co/80x80/2a2a2a/e0e0e0?text=Img'; this.onerror=null;">
                 <div class="char-text">
                     <h3>Mestre da Trupe Grimm e Rei do Pesadelo</h3>
                     <p>Chefes introduzidos na DLC "A Trupe Grimm". O Cavaleiro deve lutar contra o Mestre da Trupe Grimm como parte do Ritual. O Rei do Pesadelo Grimm é a versão final e extremamente difícil dessa luta.</p>
@@ -307,7 +299,6 @@
             </aside>
 
             <aside aria-label="O Cavaleiro Vazio (The Hollow Knight)">
-                <img src="https://placehold.co/80x80/2a2a2a/e0e0e0?text=Cavaleiro+Vazio" alt="O Cavaleiro Vazio" class="char-img" onerror="this.src='https://placehold.co/80x80/2a2a2a/e0e0e0?text=Img'; this.onerror=null;">
                 <div class="char-text">
                     <h3>O Cavaleiro Vazio (The Hollow Knight)</h3>
                     <p>O receptáculo original escolhido pelo Rei Pálido, agora totalmente consumido pela Radiância. A batalha final "padrão" do jogo, travada dentro do Templo do Ovo Negro.</p>
@@ -315,7 +306,6 @@
             </aside>
 
             <aside aria-label="A Radiância (The Radiance)">
-                <img src="https://placehold.co/80x80/2a2a2a/e0e0e0?text=Radiancia" alt="A Radiância" class="char-img" onerror="this.src='https://placehold.co/80x80/2a2a2a/e0e0e0?text=Img'; this.onerror=null;">
                 <div class="char-text">
                     <h3>A Radiância (The Radiance)</h3>
                     <p>O verdadeiro chefe final do jogo. Uma divindade antiga de luz e sonhos que foi esquecida e aprisionada, dando origem à Infecção. Ela é combatida no Mundo dos Sonhos, acessada através do Cavaleiro Vazio.</p>
@@ -323,44 +313,44 @@
             </aside>
 
             <aside aria-label="Chefes do Godmaster">
-                <img src="https://placehold.co/80x80/2a2a2a/e0e0e0?text=Godmaster" alt="Chefes do Godmaster" class="char-img" onerror="this.src='https://placehold.co/80x80/2a2a2a/e0e0e0?text=Img'; this.onerror=null;">
                 <div class="char-text">
                     <h3>Chefes do Godmaster</h3>
                     <p>Chefes exclusivos da DLC "Godmaster", encontrados no Lar dos Deuses. Isso inclui as Irmãs de Batalha (Mantis Lords mais rápidas), Nosk Alado, Mestre do Ferrão Sly, Receptáculo Puro (O Cavaleiro Vazio em seu auge) e a Radiância Absoluta.</p>
                 </div>
             </aside>
-
         </section>
     </main>
 
-    <button id="infoButton" aria-label="Abrir o Campo de Ajuda"><img src="assets/img/icone knight.png" alt="Icone do Cavalheiro de Hollow Knight" class="iconeCanto"></button>
+    <button id="infoButton" aria-label="Abrir o Campo de Ajuda"><img src="assets/img/icone knight.png" alt="Icone do Cavaleiro de Hollow Knight" class="iconeCanto"></button>
 
     <div id="infoModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitulo">
         <div class="conteudoModal">
-            <span id="fecharModal" aria-label="Fechar Janela">&times;</span>
-            <h2>Suporte</h2>
+            <span id="fecharModal" aria-label="Fechar Janela" tabindex="0">&times;</span>
+            <h2 id="modalTitulo">Suporte</h2>
             <p style="font-size: 16px;">Este site é um projeto acadêmico para a Universidade Positivo.<br>
-Encontrou algum bug, erro de layout ou tem alguma sugestão?<br>
-Sua opinião é muito bem-vinda!
-<br><br>
-<strong>Desenvolvedor:</strong> Andrew Koenig Camargo<br>
-<strong>Email para Contato:</strong> andrewkoenig04@gmail.com<br>
-<strong>GitHub do Projeto:</strong> <a href="[link-para-seu-github]" target="_blank" style="color: #61dafb; text-decoration: none;">Ver Código</a></p>
+            Encontrou algum bug, erro de layout ou tem alguma sugestão?<br>
+            Sua opinião é muito bem-vinda!
+            <br><br>
+            <strong>Desenvolvedor:</strong> Andrew Koenig Camargo<br>
+            <strong>Email para Contato:</strong> andrewkoenig04@gmail.com<br>
+            <strong>GitHub do Projeto:</strong> <a href="https://github.com/andrewkoenigscr/HollowPedia" target="_blank" style="color: #61dafb; text-decoration: none;">Ver Código</a></p>
         </div>
     </div>
 
     <footer aria-label="Rodapé com informações institucionais" id="rodape">
         <article aria-label="Outros jogos relacionados a Hollow Knight">
             <div id="outrosJogos">
-                <h2>Outros Jogos</h2>
+                <h3>Outros Jogos</h3>
                 <ul>
                     <li><a href="#">Hollow Knight Silksong</a></li>
-                    <li><a href="https://youtu.be/ItQoBbQGMvY?si=sXtz2vTySvIUA2h1">História Completa de Hollow Knight</a></li> </ul>
+                    <li><a href="https://youtu.be/ItQoBbQGMvY?si=sXtz2vTySvIUA2h1">História Completa de Hollow Knight</a></li> 
+                </ul>
             </div>
         </article>
         <p>Website para Realização de Avaliação da Matéria Desenvolvimento Web Básico da Universidade Positivo</p>
     </footer>
 
+    <script src="js/script.js"></script>
     <script src="js/scriptModal.js"></script>
 </body>
 </html>

@@ -9,9 +9,8 @@
     <link rel="stylesheet" href="assets/css/styleModal.css">
     <link rel="stylesheet" href="assets/css/styleAnimation.css">
 
-    <!-- Estilos para a tabela e imagem principal -->
     <style>
-        /* Estilo para a imagem principal (reaproveitado de regioes.html) */
+        /* Estilo para a imagem principal */
         .map-img {
             display: block;
             margin: 25px auto;
@@ -22,57 +21,51 @@
             background-color: #1a1a1a;
         }
 
-        /* Estilos da Tabela de Amuletos */
+        /* CORREÇÃO AQUI: Força a tabela a ocupar toda a largura do Grid */
         table {
+            grid-column: 1 / -1; /* Ocupa todas as colunas */
             width: 100%;
             margin-top: 30px;
-            border-collapse: collapse; /* Une as bordas */
-            color: #f0f0f0; /* Cor do texto geral da tabela */
+            border-collapse: collapse; 
+            color: #f0f0f0; 
         }
 
         table caption {
-            font-size: 1.5em; /* Tamanho do título da tabela */
+            font-size: 1.5em; 
             color: #f5f5f5;
             margin-bottom: 20px;
             font-weight: 600;
         }
 
         table th, table td {
-            border: 1px solid rgba(130, 170, 255, 0.4); /* Borda azulada */
+            border: 1px solid rgba(130, 170, 255, 0.4); 
             padding: 12px 15px;
             text-align: left;
-            vertical-align: middle; /* Alinha o conteúdo no meio */
+            vertical-align: middle; 
         }
 
         /* Cabeçalho da Tabela */
         table thead th {
-            background-color: #1a1a1a; /* Fundo escuro para o cabeçalho */
-            color: #82aaff; /* Cor do texto do cabeçalho */
+            background-color: #1a1a1a; 
+            color: #82aaff; 
             font-size: 1.1em;
             text-align: center;
         }
 
         /* Corpo da Tabela */
         table tbody tr:nth-child(even) {
-            background-color: rgba(26, 26, 26, 0.75); /* Fundo opaco para linhas pares */
+            background-color: rgba(26, 26, 26, 0.75); 
         }
 
         table tbody tr:hover {
-            background-color: rgba(130, 170, 255, 0.15); /* Efeito ao passar o mouse */
+            background-color: rgba(130, 170, 255, 0.15); 
         }
 
-        table tbody td:first-child { /* Centraliza a coluna da imagem */
+        /* Primeira coluna (Número) centralizada */
+        table tbody td:first-child {
             text-align: center;
-        }
-        
-        /* Imagem do amuleto dentro da tabela */
-        .charm-icon {
-            width: 50px;
-            height: 50px;
-            background-color: #222;
-            border-radius: 5px;
-            border: 1px solid #82aaff;
-            display: inline-block;
+            font-weight: bold;
+            color: #82aaff;
         }
 
         /* Rodapé da Tabela */
@@ -105,7 +98,7 @@
     </header>
 
     <main aria-label="Conteúdo principal">
-        <div class="falling-particles">
+        <div class="falling-particles" aria-hidden="true">
             <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
         </div>
         
@@ -113,19 +106,17 @@
             <h2>Amuletos</h2>
             <p>Amuletos são artefatos especiais em Hollow Knight que concedem ao Cavaleiro habilidades e bônus únicos. Cada amuleto custa um certo número de "entalhes" para ser equipado, forçando o jogador a escolher combinações estratégicas.</p>
             
-            <!-- Imagem Geral de Todos os Amuletos -->
             <img src="assets/img/amuletos.jpg" 
                 alt="Todos os Amuletos de Hallownest" 
                 class="map-img" 
                 onerror="this.src='https://placehold.co/800x200/2a2a2a/e0e0e0?text=Img'; this.onerror=null;">
 
-            <!-- Tabela Semântica 100% CORRETA com os 40 Amuletos -->
             <table>
                 <caption>Tabela de Amuletos de Hallownest</caption>
                 
                 <thead>
                     <tr>
-                        <th scope="col">Imagem</th>
+                        <th scope="col" style="width: 50px;">#</th>
                         <th scope="col">Nome</th>
                         <th scope="col">Custo</th>
                         <th scope="col">Descrição (O que faz)</th>
@@ -134,319 +125,317 @@
                 </thead>
                 
                 <tbody>
-                    <!-- Amuletos (40 no total) -->
                     <tr>
-                        <td><img src="https://placehold.co/50x50/2a2a2a/e0e0e0?text=Icon" alt="Bússola Caprichosa" class="charm-icon"></td>
+                        <td>1</td>
                         <td>Bússola Caprichosa</td>
                         <td>1</td>
                         <td>Mostra a localização do Cavaleiro no mapa.</td>
                         <td>Comprado de Iselda em Dirtmouth por 220 Geo.</td>
                     </tr>
                     <tr>
-                        <td><img src="https://placehold.co/50x50/2a2a2a/e0e0e0?text=Icon" alt="Enxame de Colecionadores" class="charm-icon"></td>
+                        <td>2</td>
                         <td>Enxame de Colecionadores</td>
                         <td>1</td>
                         <td>Um enxame segue o Cavaleiro e coleta Geo largado.</td>
                         <td>Comprado de Sly em Dirtmouth por 300 Geo.</td>
                     </tr>
                     <tr>
-                        <td><img src="https://placehold.co/50x50/2a2a2a/e0e0e0?text=Icon" alt="Casco Vigoroso" class="charm-icon"></td>
+                        <td>3</td>
                         <td>Casco Vigoroso</td>
                         <td>2</td>
                         <td>Aumenta o tempo de invencibilidade após sofrer dano.</td>
                         <td>Comprado de Sly em Dirtmouth por 200 Geo.</td>
                     </tr>
                     <tr>
-                        <td><img src="https://placehold.co/50x50/2a2a2a/e0e0e0?text=Icon" alt="Alma do Tolo" class="charm-icon"></td>
+                        <td>4</td>
                         <td>Alma do Tolo</td>
                         <td>2</td>
                         <td>Aumenta a quantidade de Alma recebida ao acertar inimigos.</td>
                         <td>Comprado de Salubra por 100 Geo.</td>
                     </tr>
                     <tr>
-                        <td><img src="https://placehold.co/50x50/2a2a2a/e0e0e0?text=Icon" alt="Pedra Xamã" class="charm-icon"></td>
+                        <td>5</td>
                         <td>Pedra Xamã</td>
                         <td>3</td>
                         <td>Aumenta o poder (dano e tamanho) das magias.</td>
                         <td>Comprado de Salubra por 220 Geo.</td>
                     </tr>
                     <tr>
-                        <td><img src="https://placehold.co/50x50/2a2a2a/e0e0e0?text=Icon" alt="Mestre das Almas" class="charm-icon"></td>
+                        <td>6</td>
                         <td>Mestre das Almas</td>
                         <td>4</td>
                         <td>Aumenta muito a quantidade de Alma recebida ao acertar inimigos.</td>
                         <td>Comprado de Salubra por 550 Geo (requer 10 amuletos).</td>
                     </tr>
                     <tr>
-                        <td><img src="https://placehold.co/50x50/2a2a2a/e0e0e0?text=Icon" alt="Mestre da Esquiva" class="charm-icon"></td>
+                        <td>7</td>
                         <td>Mestre da Esquiva</td>
                         <td>2</td>
                         <td>Permite esquivar (correr) para baixo e reinicia a corrida no ar.</td>
                         <td>Comprado de Sly após entregar o Brasão do Mestre.</td>
                     </tr>
                     <tr>
-                        <td><img src="https://placehold.co/50x50/2a2a2a/e0e0e0?text=Icon" alt="Mestre da Corrida" class="charm-icon"></td>
+                        <td>8</td>
                         <td>Mestre da Corrida</td>
                         <td>1</td>
                         <td>Permite correr mais rápido.</td>
                         <td>Comprado de Sly após entregar o Brasão do Mestre.</td>
                     </tr>
                     <tr>
-                        <td><img src="https://placehold.co/50x50/2a2a2a/e0e0e0?text=Icon" alt="Canção das Larvas" class="charm-icon"></td>
+                        <td>9</td>
                         <td>Canção das Larvas</td>
                         <td>1</td>
                         <td>Ganha Alma ao sofrer dano.</td>
                         <td>Recompensa do Pai Larva após resgatar 10 Larvas.</td>
                     </tr>
                     <tr>
-                        <td><img src="https://placehold.co/50x50/2a2a2a/e0e0e0?text=Icon" alt="Elegia da Larvamosca" class="charm-icon"></td>
+                        <td>10</td>
                         <td>Elegia da Larvamosca</td>
                         <td>3</td>
                         <td>Dispara um feixe de energia do ferrão quando o Cavaleiro está com a vida cheia.</td>
                         <td>Recompensa do Pai Larva após resgatar todas as 46 Larvas.</td>
                     </tr>
                     <tr>
-                        <td><img src="https://placehold.co/50x50/2a2a2a/e0e0e0?text=Icon" alt="Coração Frágil" class="charm-icon"></td>
+                        <td>11</td>
                         <td>Coração Frágil</td>
                         <td>2</td>
                         <td>Aumenta a vida em 2 máscaras. Quebra ao morrer.</td>
                         <td>Comprado de Devorador de Pernas nos Ermos Fúngicos.</td>
                     </tr>
                     <tr>
-                        <td><img src="https://placehold.co/50x50/2a2a2a/e0e0e0?text=Icon" alt="Ganância Frágil" class="charm-icon"></td>
+                        <td>12</td>
                         <td>Ganância Frágil</td>
                         <td>2</td>
                         <td>Aumenta a quantidade de Geo coletada. Quebra ao morrer.</td>
                         <td>Comprado de Devorador de Pernas nos Ermos Fúngicos.</td>
                     </tr>
                     <tr>
-                        <td><img src="https://placehold.co/50x50/2a2a2a/e0e0e0?text=Icon" alt="Força Frágil" class="charm-icon"></td>
+                        <td>13</td>
                         <td>Força Frágil</td>
                         <td>3</td>
                         <td>Aumenta o dano do ferrão. Quebra ao morrer.</td>
                         <td>Comprado de Devorador de Pernas nos Ermos Fúngicos.</td>
                     </tr>
                     <tr>
-                        <td><img src="https://placehold.co/50x50/2a2a2a/e0e0e0?text=Icon" alt="Distintivo da Magia" class="charm-icon"></td>
+                        <td>14</td>
                         <td>Distintivo da Magia</td>
                         <td>2</td>
                         <td>Reduz o custo de Alma das magias.</td>
                         <td>Encontrado na Encruzilhada Esquecida, em um santuário de caracóis.</td>
                     </tr>
                     <tr>
-                        <td><img src="https://placehold.co/50x50/2a2a2a/e0e0e0?text=Icon" alt="Corpo Firme" class="charm-icon"></td>
+                        <td>15</td>
                         <td>Corpo Firme</td>
                         <td>1</td>
                         <td>Impede que o Cavaleiro seja jogado para trás ao acertar inimigos.</td>
                         <td>Comprado de Salubra por 120 Geo.</td>
                     </tr>
                     <tr>
-                        <td><img src="https://placehold.co/50x50/2a2a2a/e0e0e0?text=Icon" alt="Golpe Pesado" class="charm-icon"></td>
+                        <td>16</td>
                         <td>Golpe Pesado</td>
                         <td>2</td>
                         <td>Aumenta a força com que os inimigos são jogados para trás.</td>
                         <td>Comprado de Sly em Dirtmouth por 350 Geo.</td>
                     </tr>
                     <tr>
-                        <td><img src="https://placehold.co/50x50/2a2a2a/e0e0e0?text=Icon" alt="Corte Rápido" class="charm-icon"></td>
+                        <td>17</td>
                         <td>Corte Rápido</td>
                         <td>3</td>
                         <td>Aumenta a velocidade de ataque do ferrão.</td>
                         <td>Encontrado na Beira do Reino, em um túnel escondido.</td>
                     </tr>
                     <tr>
-                        <td><img src="https://placehold.co/50x50/2a2a2a/e0e0e0?text=Icon" alt="Ferrão Longo" class="charm-icon"></td>
+                        <td>18</td>
                         <td>Ferrão Longo</td>
                         <td>2</td>
                         <td>Aumenta levemente o alcance do ferrão.</td>
                         <td>Comprado de Salubra por 300 Geo.</td>
                     </tr>
                     <tr>
-                        <td><img src="https://placehold.co/50x50/2a2a2a/e0e0e0?text=Icon" alt="Marca de Orgulho" class="charm-icon"></td>
+                        <td>19</td>
                         <td>Marca de Orgulho</td>
                         <td>3</td>
                         <td>Aumenta muito o alcance do ferrão.</td>
                         <td>Recompensa por derrotar os Lordes Louva-a-Deus (Ermos Fúngicos).</td>
                     </tr>
                     <tr>
-                        <td><img src="https://placehold.co/50x50/2a2a2a/e0e0e0?text=Icon" alt="Fúria dos Caídos" class="charm-icon"></td>
+                        <td>20</td>
                         <td>Fúria dos Caídos</td>
                         <td>2</td>
                         <td>Aumenta o dano do ferrão quando o Cavaleiro está com 1 de vida.</td>
                         <td>Encontrado na Passagem do Rei (King's Pass), área inicial.</td>
                     </tr>
                     <tr>
-                        <td><img src="https://placehold.co/50x50/2a2a2a/e0e0e0?text=Icon" alt="Invólucro de Espinhos" class="charm-icon"></td>
+                        <td>21</td>
                         <td>Invólucro de Espinhos</td>
                         <td>1</td>
                         <td>Emite espinhos que causam dano ao sofrer dano.</td>
                         <td>Encontrado no Caminho Verde, em uma área de vinhas.</td>
                     </tr>
                     <tr>
-                        <td><img src="https://placehold.co/50x50/2a2a2a/e0e0e0?text=Icon" alt="Carapaça de Baldur" class="charm-icon"></td>
+                        <td>22</td>
                         <td>Carapaça de Baldur</td>
                         <td>2</td>
                         <td>Cria uma carapaça protetora ao focar Alma (curar).</td>
                         <td>Encontrado em um baú no Caminho Verde (área sudeste).</td>
                     </tr>
                     <tr>
-                        <td><img src="https://placehold.co/50x50/2a2a2a/e0e0e0?text=Icon" alt="Ninhada de Flukes" class="charm-icon"></td>
+                        <td>23</td>
                         <td>Ninhada de Flukes</td>
                         <td>2</td>
                         <td>Transforma a magia Espírito Vingativo em um enxame de Flukes.</td>
                         <td>Recompensa por derrotar a Mãe dos Flukes (Hidrovia Real).</td>
                     </tr>
                     <tr>
-                        <td><img src="https://placehold.co/50x50/2a2a2a/e0e0e0?text=Icon" alt="Bênção do Defensor" class="charm-icon"></td>
+                        <td>24</td>
                         <td>Bênção do Defensor</td>
                         <td>1</td>
                         <td>Emite um cheiro heroico (e venenoso) que causa dano a inimigos próximos.</td>
                         <td>Recompensa por derrotar o Defensor do Esterco.</td>
                     </tr>
                     <tr>
-                        <td><img src="https://placehold.co/50x50/2a2a2a/e0e0e0?text=Icon" alt="Ventre Brilhante" class="charm-icon"></td>
+                        <td>25</td>
                         <td>Ventre Brilhante</td>
                         <td>2</td>
                         <td>Gera filhotes que atacam inimigos, consumindo Alma.</td>
                         <td>Encontrado na Encruzilhada Esquecida, em uma sala com um "fóssil".</td>
                     </tr>
                     <tr>
-                        <td><img src="https://placehold.co/50x50/2a2a2a/e0e0e0?text=Icon" alt="Foco Rápido" class="charm-icon"></td>
+                        <td>26</td>
                         <td>Foco Rápido</td>
                         <td>3</td>
                         <td>Aumenta a velocidade de focar Alma (curar).</td>
                         <td>Comprado de Salubra por 800 Geo.</td>
                     </tr>
                     <tr>
-                        <td><img src="https://placehold.co/50x50/2a2a2a/e0e0e0?text=Icon" alt="Foco Profundo" class="charm-icon"></td>
+                        <td>27</td>
                         <td>Foco Profundo</td>
                         <td>4</td>
                         <td>Dobra a quantidade de vida curada, mas torna a cura muito mais lenta.</td>
                         <td>Encontrado no Pico de Cristal, em uma área escondida.</td>
                     </tr>
                     <tr>
-                        <td><img src="https://placehold.co/50x50/2a2a2a/e0e0e0?text=Icon" alt="Coração de Sangue Vital" class="charm-icon"></td>
+                        <td>28</td>
                         <td>Coração de Sangue Vital</td>
                         <td>2</td>
                         <td>Adiciona 2 máscaras azuis de Sangue Vital.</td>
                         <td>Comprado de Salubra por 250 Geo.</td>
                     </tr>
                     <tr>
-                        <td><img src="https://placehold.co/50x50/2a2a2a/e0e0e0?text=Icon" alt="Casulo de Vida" class="charm-icon"></td>
+                        <td>29</td>
                         <td>Casulo de Vida</td>
                         <td>3</td>
                         <td>Adiciona 4 máscaras azuis de Sangue Vital.</td>
                         <td>Encontrado no Abismo, em uma porta que requer 15 Sangues Vitais.</td>
                     </tr>
                     <tr>
-                        <td><img src="https://placehold.co/50x50/2a2a2a/e0e0e0?text=Icon" alt="Bênção de Joni" class="charm-icon"></td>
+                        <td>30</td>
                         <td>Bênção de Joni</td>
                         <td>4</td>
                         <td>Transforma todas as máscaras de vida em Sangue Vital (não pode curar).</td>
                         <td>Encontrado no Túmulo de Joni (Penhascos Uivantes).</td>
                     </tr>
                     <tr>
-                        <td><img src="https://placehold.co/50x50/2a2a2a/e0e0e0?text=Icon" alt="Sangue da Colmeia" class="charm-icon"></td>
+                        <td>31</td>
                         <td>Sangue da Colmeia</td>
                         <td>4</td>
                         <td>Regenera lentamente a última máscara de vida perdida (apenas máscaras normais).</td>
                         <td>Recompensa por derrotar o Cavaleiro da Colmeia (A Colmeia).</td>
                     </tr>
                     <tr>
-                        <td><img src="https://placehold.co/50x50/2a2a2a/e0e0e0?text=Icon" alt="Cogumelo com Esporos" class="charm-icon"></td>
+                        <td>32</td>
                         <td>Cogumelo com Esporos</td>
                         <td>1</td>
                         <td>Libera uma nuvem de esporos venenosos ao focar Alma (curar).</td>
                         <td>Encontrado nos Ermos Fúngicos (requer Amuleto do Defensor).</td>
                     </tr>
                     <tr>
-                        <td><img src="https://placehold.co/50x50/2a2a2a/e0e0e0?text=Icon" alt="Sombra Afiada" class="charm-icon"></td>
+                        <td>33</td>
                         <td>Sombra Afiada</td>
                         <td>2</td>
                         <td>Aumenta o alcance da esquiva (Manto Sombrio) e causa dano ao atravessar inimigos.</td>
                         <td>Encontrado em Ninho Profundo, atrás de um Portão Sombrio.</td>
                     </tr>
                     <tr>
-                        <td><img src="https://placehold.co/50x50/2a2a2a/e0e0e0?text=Icon" alt="Forma de Unn" class="charm-icon"></td>
+                        <td>34</td>
                         <td>Forma de Unn</td>
                         <td>2</td>
                         <td>Permite se mover (como uma lesma) enquanto foca Alma (cura).</td>
                         <td>Encontrado no Lago de Unn (Caminho Verde), requer Lágrima de Isma.</td>
                     </tr>
                     <tr>
-                        <td><img src="https://placehold.co/50x50/2a2a2a/e0e0e0?text=Icon" alt="Glória do Mestre do Ferrão" class="charm-icon"></td>
+                        <td>35</td>
                         <td>Glória do Mestre do Ferrão</td>
                         <td>1</td>
                         <td>Reduz o tempo de carregamento das Artes do Ferrão.</td>
                         <td>Recompensa de Sly após aprender todas as 3 Artes do Ferrão.</td>
                     </tr>
                     <tr>
-                        <td><img src="https://placehold.co/50x50/2a2a2a/e0e0e0?text=Icon" alt="Canção de Tecelã" class="charm-icon"></td>
+                        <td>36</td>
                         <td>Canção de Tecelã</td>
                         <td>2</td>
                         <td>Gera 3 pequenas tecelãs que atacam inimigos e coletam Alma.</td>
                         <td>Encontrado no Covil da Tecelã (Ninho Profundo).</td>
                     </tr>
                     <tr>
-                        <td><img src="https://placehold.co/50x50/2a2a2a/e0e0e0?text=Icon" alt="Portador dos Sonhos" class="charm-icon"></td>
+                        <td>37</td>
                         <td>Portador dos Sonhos</td>
                         <td>1</td>
                         <td>Carrega o Ferrão dos Sonhos mais rápido e coleta mais Alma com ele.</td>
                         <td>Recompensa da Vidente ao coletar 500 Essências.</td>
                     </tr>
                     <tr>
-                        <td><img src="https://placehold.co/50x50/2a2a2a/e0e0e0?text=Icon" alt="Escudo dos Sonhos" class="charm-icon"></td>
+                        <td>38</td>
                         <td>Escudo dos Sonhos</td>
                         <td>3</td>
                         <td>Cria um escudo giratório que bloqueia projéteis e causa dano.</td>
                         <td>Encontrado na Terra do Repouso, em uma sala abaixo da Vidente.</td>
                     </tr>
                     <tr>
-                        <td><img src="https://placehold.co/50x50/2a2a2a/e0e0e0?text=Icon" alt="Bênção de Grimm" class="charm-icon"></td>
+                        <td>39</td>
                         <td>Bênção de Grimm</td>
                         <td>2</td>
                         <td>Um companheiro que ataca inimigos. Necessário para a DLC da Trupe Grimm.</td>
                         <td>Recebido de Grimm após invocar a Trupe.</td>
                     </tr>
                     <tr>
-                        <td><img src="https://placehold.co/50x50/2a2a2a/e0e0e0?text=Icon" alt="Melodia Despreocupada" class="charm-icon"></td>
+                        <td>40</td>
                         <td>Melodia Despreocupada</td>
                         <td>3</td>
                         <td>Chance de bloquear dano (a chance aumenta a cada golpe sofrido).</td>
                         <td>Recebido de Nymm em Dirtmouth após banir a Trupe Grimm.</td>
                     </tr>
                     
-                    <!-- Amuletos Especiais / Metades -->
                     <tr>
-                        <td><img src="https://placehold.co/50x50/2a2a2a/e0e0e0?text=Icon" alt="Alma da Realeza" class="charm-icon"></td>
+                        <td>41</td>
                         <td>Alma da Realeza</td>
                         <td>5</td>
                         <td>Gera Alma lentamente ao longo do tempo. (Metade da Dama Branca e Rei Pálido)</td>
                         <td>Obtido combinando as duas metades da Dama Branca e do Rei Pálido.</td>
                     </tr>
                     <tr>
-                        <td><img src="https://placehold.co/50x50/2a2a2a/e0e0e0?text=Icon" alt="Nascida-do-Vazio" class="charm-icon"></td>
+                        <td>42</td>
                         <td>Nascida-do-Vazio</td>
                         <td>0</td>
                         <td>Unifica o Vazio. Permite que a Sombra e os Irmãos ataquem passivamente.</td>
                         <td>Obtido no Abismo após transformar a Alma da Realeza.</td>
                     </tr>
                     <tr>
-                        <td><img src="https://placehold.co/50x50/2a2a2a/e0e0e0?text=Icon" alt="Força Inquebrável" class="charm-icon"></td>
+                        <td>43</td>
                         <td>Força Inquebrável</td>
                         <td>3</td>
                         <td>Aumenta o dano do ferrão. Não quebra ao morrer.</td>
                         <td>Pagando 15.000 Geo para Divino (Trupe Grimm) com a Força Frágil.</td>
                     </tr>
                     <tr>
-                        <td><img src="https://placehold.co/50x50/2a2a2a/e0e0e0?text=Icon" alt="Coração Inquebrável" class="charm-icon"></td>
+                        <td>44</td>
                         <td>Coração Inquebrável</td>
                         <td>2</td>
                         <td>Aumenta a vida em 2 máscaras. Não quebra ao morrer.</td>
                         <td>Pagando 12.000 Geo para Divino (Trupe Grimm) com o Coração Frágil.</td>
                     </tr>
                     <tr>
-                        <td><img src="https://placehold.co/50x50/2a2a2a/e0e0e0?text=Icon" alt="Ganância Inquebrável" class="charm-icon"></td>
+                        <td>45</td>
                         <td>Ganância Inquebrável</td>
                         <td>2</td>
                         <td>Aumenta a quantidade de Geo coletada. Não quebra ao morrer.</td>
@@ -456,7 +445,7 @@
 
                 <tfoot>
                     <tr>
-                        <td colspan="5">Existem 40 amuletos no total para colecionar em Hallownest.</td>
+                        <td colspan="5">Existem 40 amuletos originais e versões inquebráveis/evoluídas.</td>
                     </tr>
                 </tfoot>
             </table>
@@ -464,28 +453,26 @@
         </section>
     </main>
 
-    <!-- Seu modal hardcoded -->
     <button id="infoButton" aria-label="Abrir o Campo de Ajuda"><img src="assets/img/icone knight.png" alt="Icone do Cavalheiro de Hollow Knight" class="iconeCanto"></button>
 
     <div id="infoModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitulo">
         <div class="conteudoModal">
-            <span id="fecharModal" aria-label="Fechar Janela">&times;</span>
-            <h2>Suporte</h2>
+            <span id="fecharModal" aria-label="Fechar Janela" tabindex="0">&times;</span>
+            <h2 id="modalTitulo">Suporte</h2>
             <p style="font-size: 16px;">Este site é um projeto acadêmico para a Universidade Positivo.<br>
 Encontrou algum bug, erro de layout ou tem alguma sugestão?<br>
 Sua opinião é muito bem-vinda!
 <br><br>
 <strong>Desenvolvedor:</strong> Andrew Koenig Camargo<br>
 <strong>Email para Contato:</strong> andrewkoenig04@gmail.com<br>
-<strong>GitHub do Projeto:</strong> <a href="[link-para-seu-github]" target="_blank" style="color: #61dafb; text-decoration: none;">Ver Código</a></p>
+<strong>GitHub do Projeto:</strong> <a href="https://github.com/andrewkoenigscr/HollowPedia" target="_blank" style="color: #61dafb; text-decoration: none;">Ver Código</a></p>
         </div>
     </div>
 
-    <!-- Seu footer hardcoded -->
     <footer aria-label="Rodapé com informações institucionais" id="rodape">
         <article aria-label="Outros jogos relacionados a Hollow Knight">
             <div id="outrosJogos">
-                <h2>Outros Jogos</h2>
+                <h3>Outros Jogos</h3>
                 <ul>
                     <li><a href="#">Hollow Knight Silksong</a></li>
                     <li><a href="https://youtu.be/ItQoBbQGMvY?si=sXtz2vTySvIUA2h1">História Completa de Hollow Knight</a></li> </ul>
@@ -495,5 +482,6 @@ Sua opinião é muito bem-vinda!
     </footer>
 
     <script src="js/scriptModal.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

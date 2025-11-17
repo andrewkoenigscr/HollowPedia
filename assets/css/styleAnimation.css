@@ -11,10 +11,10 @@
   pointer-events: none;
 }
 
-/* ANIMAÇÃO DE QUEDA CORRIGIDA */
+/* ANIMAÇÃO DE QUEDA */
 @keyframes fall {
   0% {
-    top: -100px; /* Começa 100px acima do topo */
+    top: -100px;
     transform: translateX(0px);
     opacity: 0;
   }
@@ -22,17 +22,16 @@
     opacity: 0.7;
   }
   100% {
-    top: 100%; /* Desce 100% da altura do container (o <main>) */
+    top: 100%;
     transform: translateX(20px);
     opacity: 0;
   }
 }
 
-/* REGRA BASE PARA TODAS AS PARTÍCULAS (as <div>s) */
+/* REGRA BASE PARA TODAS AS PARTÍCULAS */
 .falling-particles > div {
   content: "";
   position: absolute;
-  /* top: 0; FOI REMOVIDO DAQUI */
   background: #e0e0e0;
   border-radius: 50%;
   
@@ -41,13 +40,13 @@
   animation-iteration-count: infinite;
 }
 
-/* --- ESTILOS INDIVIDUAIS PARA CADA PARTÍCULAS --- */
+/* --- ESTILOS INDIVIDUAIS PARA CADA PARTÍCULA --- */
 
 .falling-particles > div:nth-child(1) {
   width: 10px;
   height: 10px;
   left: 10%; 
-  animation-duration: 12s; /* Duração um pouco maior */
+  animation-duration: 12s; 
   animation-delay: -3s; 
 }
 
@@ -55,7 +54,7 @@
   width: 6px;
   height: 6px;
   left: 20%;
-  animation-duration: 14s; /* Duração um pouco maior */
+  animation-duration: 14s; 
   animation-delay: -5s;
   background: #aaa; 
 }
@@ -64,7 +63,7 @@
   width: 8px;
   height: 8px;
   left: 30%;
-  animation-duration: 10s; /* Duração um pouco maior */
+  animation-duration: 10s; 
   animation-delay: -1s;
 }
 
@@ -72,7 +71,7 @@
   width: 12px;
   height: 12px;
   left: 40%;
-  animation-duration: 9s; /* Duração um pouco maior */
+  animation-duration: 9s; 
   animation-delay: -7s;
   background: #ccc;
 }
@@ -81,7 +80,7 @@
   width: 5px;
   height: 5px;
   left: 50%;
-  animation-duration: 17s; /* Duração um pouco maior */
+  animation-duration: 17s; 
   animation-delay: -2s;
 }
 
@@ -89,7 +88,7 @@
   width: 8px;
   height: 8px;
   left: 60%;
-  animation-duration: 11s; /* Duração um pouco maior */
+  animation-duration: 11s; 
   animation-delay: -4s;
 }
 
@@ -97,7 +96,7 @@
   width: 4px;
   height: 4px;
   left: 70%;
-  animation-duration: 15s; /* Duração um pouco maior */
+  animation-duration: 15s; 
   animation-delay: -8s;
   background: #bbb;
 }
@@ -106,6 +105,6 @@
   width: 10px;
   height: 10px;
   left: 80%;
-  animation-duration: 9s; /* Duração um pouco maior */
+  animation-duration: 9s; 
   animation-delay: -1.5s;
 }
