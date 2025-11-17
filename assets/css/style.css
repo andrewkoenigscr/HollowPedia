@@ -195,3 +195,85 @@ footer p {
     font-size: 13px;
     color: #aaa;
 }
+
+/* =========================================
+    RESPONSIVIDADE (MOBILE)
+    Adicione isso ao final do style.css
+   ========================================= */
+
+@media screen and (max-width: 768px) {
+    
+    /* 1. Ajuste do Cabeçalho e Título */
+    header h1 {
+        font-size: 36px; /* Diminui a fonte gigante */
+        margin-top: 20px;
+    }
+
+    /* 2. Transformar o Menu em Coluna */
+    nav {
+        flex-direction: column; /* Empilha os itens */
+        padding-bottom: 20px;
+    }
+
+    nav ul {
+        flex-direction: column; /* Links um embaixo do outro */
+        gap: 10px;
+        margin-bottom: 15px;
+    }
+
+    /* O botão de cadastro deixa de ser absoluto e entra no fluxo */
+    nav button {
+        position: static; /* Remove a posição fixa no canto */
+        transform: none; /* Remove o ajuste de centralização vertical */
+        margin-top: 10px;
+        width: 80%; /* Botão largo para facilitar o toque */
+        padding: 12px;
+    }
+
+    /* 3. Ajustes de Layout Geral */
+    main {
+        padding: 20px 10px; /* Menos espaçamento lateral */
+    }
+
+    main section {
+        grid-template-columns: 1fr; /* Força 1 coluna apenas nos cards */
+        gap: 20px;
+    }
+
+    /* 4. Tabela de Amuletos (Rolagem Horizontal) */
+    /* Isso impede que a tabela quebre o layout no celular */
+    table {
+        display: block;
+        width: 100%;
+        overflow-x: auto; /* Cria barra de rolagem apenas na tabela */
+        white-space: nowrap; /* Impede que o texto das células quebre */
+    }
+    
+    /* Ajuste visual para indicar rolagem */
+    table th, table td {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+
+    /* 5. Ajuste do Modal (Pop-up) */
+    .conteudoModal {
+        width: 90%; /* Ocupa quase toda a tela */
+        margin: 20% auto; /* Mais para baixo */
+    }
+
+    /* 6. Ajuste do Formulário */
+    .form-container {
+        padding: 20px; /* Menos padding interno */
+        width: 95%; /* Largura total */
+    }
+
+    /* 7. Botão Flutuante do Suporte */
+    #infoButton {
+        bottom: 15px;
+        right: 15px;
+    }
+    
+    .iconeCanto {
+        width: 50px; /* Ícone menor no celular */
+    }
+}
